@@ -1,0 +1,15 @@
+%row
+	.large-12.columns
+		%h2 
+			Hello
+		%h4
+			= link_to 'New Post', new_post_path 
+			
+		%table
+			%tr
+				%th Title 
+				%th Text
+			- @posts.each do |post|
+				%tr 
+					%td= post.title
+					%td= post.text

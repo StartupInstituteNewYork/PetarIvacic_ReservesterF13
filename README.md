@@ -2,7 +2,8 @@
 myapp
 =====
 
-Personal website and Rails 4.0 boiler plate 
+Personal website. 
+Frontend: Haml, Foundation CSS
 =======
 PetarIvacic_ReservesterF13
 ==========================

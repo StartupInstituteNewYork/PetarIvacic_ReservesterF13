@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  resources :restaurants
   resources :posts
   root 'home#resume'
 

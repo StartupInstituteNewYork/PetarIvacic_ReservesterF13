@@ -1,0 +1,14 @@
+
+%h2 
+	Hello
+%h4
+	= link_to 'New Venue', new_restaurant_path 
+	
+%table
+	%tr
+		%th Title 
+		%th Text
+	- @restaurants.each do |restaurant|
+		%tr 
+			%td= restaurant.name
+			%td= restaurant.description

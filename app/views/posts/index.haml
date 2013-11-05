@@ -1,14 +1,11 @@
+.row
+	.large-12.columns
+		%h1 
+			Blog
+    	%small This is my blog. 
+    %hr
+.row
+  .large-9.columns{role: "content"}
+		= render @posts
+/ End Main Content and Sidebar
 
-%h2 
-	Hello
-%h4
-	= link_to 'New Post', new_post_path 
-	
-%table
-	%tr
-		%th Title 
-		%th Text
-	- @posts.each do |post|
-		%tr 
-			%td= post.title
-			%td= post.text

@@ -39,3 +39,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'haml'
+gem 'carrierwave'

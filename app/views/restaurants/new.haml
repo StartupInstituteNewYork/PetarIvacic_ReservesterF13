@@ -1,7 +1,7 @@
 .row
   %h2 Add New Venue
   .large-6.columns
-    = form_for :restaurant, url: restaurants_path do |f|
+    = form_for :restaurant, url: restaurants_path, :html => {:multipart => true} do |f|
       - if @restaurant.errors.any?
         #errorExplanation
           %h2
@@ -17,6 +17,8 @@
       %p
         = f.label :description
         = f.text_area :description
+      %p
+        = f.file_field :image
       %p
         = f.submit
     = link_to 'Back', restaurants_path

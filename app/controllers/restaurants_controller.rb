@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
 	end
 	
 	def create
-		@restaurant = Restaurant.new(params[:restaurant].permit(:name, :description))
+		@restaurant = Restaurant.new(params[:restaurant].permit(:name, :description, :image))
 		
 		if @restaurant.save
 			redirect_to @restaurant
@@ -34,6 +34,6 @@ class RestaurantsController < ApplicationController
 
 private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description)
+    params.require(:restaurant).permit(:name, :description, :image)
   end
 end

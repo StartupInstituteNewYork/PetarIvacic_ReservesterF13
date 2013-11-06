@@ -1,18 +1,13 @@
 .row
 	.large-12.columns
-		.panel
+		.large-9.columns
 			%h2 Food Near You 
+		.large-3.columns
+			%br
+			%p= link_to 'Add New Restaurant', new_restaurant_path, class: "small button right" 
+		%hr
 	
-%h4
-	= link_to 'Add New', new_restaurant_path 
+
 
 = render @restaurants
 	
-%table
-	%tr
-		%th Venue Name 
-		%th Description
-	- @restaurants.each do |restaurant|
-		%tr 
-			%td= restaurant.name
-			%td= restaurant.description

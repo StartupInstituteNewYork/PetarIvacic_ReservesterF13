@@ -1,8 +1,9 @@
 Blog::Application.routes.draw do
+  root 'restaurants#index'
   get "front_end/rindex"
   resources :restaurants
   resources :posts
-  root 'home#resume'
+  get 'home/resume'
 
   #get "home/contact"
   # The priority is based upon order of creation: first created -> highest priority.

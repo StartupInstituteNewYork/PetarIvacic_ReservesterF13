@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  get "front_end/rindex"
   resources :restaurants
   resources :posts
   root 'home#resume'

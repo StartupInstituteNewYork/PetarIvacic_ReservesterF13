@@ -8,6 +8,7 @@ class RestaurantsController < ApplicationController
 	end
 	
 	def create
+		@restaurant = current_owner.restaurants.build()
 		@restaurant = Restaurant.new(params[:restaurant].permit(:name, :description, :image))
 		
 		if @restaurant.save

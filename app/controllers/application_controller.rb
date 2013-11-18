@@ -9,6 +9,12 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
+
+  private
+  def currentfb_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :currentfb_user
   
 
 end

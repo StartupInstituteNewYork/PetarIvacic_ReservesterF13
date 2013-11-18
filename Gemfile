@@ -40,3 +40,6 @@ end
 gem 'haml'
 gem 'carrierwave'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'koala'

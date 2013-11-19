@@ -46,3 +46,5 @@ private
     params.require(:restaurant).permit(:name, :description, :image)
   end
 end
+
+

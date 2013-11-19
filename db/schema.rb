@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131118020931) do
+ActiveRecord::Schema.define(version: 20131119013344) do
 
   create_table "addresses", force: true do |t|
     t.string   "number"
@@ -62,6 +62,17 @@ ActiveRecord::Schema.define(version: 20131118020931) do
     t.string   "uid"
     t.string   "name"
     t.string   "oauth_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "venues", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.text     "address"
+    t.string   "phone"
+    t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

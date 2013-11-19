@@ -1,0 +1,11 @@
+%p Venue Show Path
+= image_tag @venue.image_url.to_s
+%p
+	%strong Text:
+	= @venue.name
+%p
+	%strong Text:
+	= @venue.description
+
+= link_to 'Edit', edit_venue_path(@venue)
+= link_to 'Back', venues_path

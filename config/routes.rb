@@ -10,7 +10,7 @@ Blog::Application.routes.draw do
   devise_for :owners
   root 'restaurants#index'
   get "front_end/rindex"
-  resources :restaurants
+  resources :venues
   resources :posts
   get 'home/resume'
 

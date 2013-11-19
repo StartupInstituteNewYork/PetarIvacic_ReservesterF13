@@ -4,12 +4,12 @@
 			%h2 Food Near You 
 		.large-3.columns
 			%br
-			%p= link_to 'Add New Restaurant', new_restaurant_path, class: "small button right" 
+			%p= link_to 'Add New venue', new_venue_path, class: "small button right" 
 		%hr
 		
 
 
-= render @restaurants
+= render @venues
 
 #user-widget
 	- if currentfb_user

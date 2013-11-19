@@ -1,15 +1,15 @@
 .row
   %h2 Add New Venue
   .large-6.columns
-    = form_for :restaurant, url: restaurants_path, :html => {:multipart => true} do |f|
-      - if @restaurant.errors.any?
+    = form_for :venue, url: venues_path, :html => {:multipart => true} do |f|
+      - if @venue.errors.any?
         #errorExplanation
           %h2
-            = pluralize(@restaurant.errors.count, "error")
+            = pluralize(@venue.errors.count, "error")
             prohibited
             this post from being saved:
           %ul
-            - @restaurant.errors.full_messages.each do |msg|
+            - @venue.errors.full_messages.each do |msg|
               %li= msg
       %p
         = f.label :name
@@ -21,4 +21,4 @@
         = f.file_field :image
       %p
         = f.submit
-    = link_to 'Back', restaurants_path
+    = link_to 'Back', venues_path

@@ -11,7 +11,7 @@
           %a= link_to current_owner.email, '#'
           %ul.dropdown
             %li
-              %a= link_to 'Add a Restaurant', new_restaurant_path
+              %a= link_to 'Account', new_venue_path
               %a= link_to 'Logout', destroy_owner_session_path(owner_session), method: :delete
       - else
         %li

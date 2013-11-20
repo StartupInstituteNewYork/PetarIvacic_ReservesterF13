@@ -8,11 +8,10 @@ Blog::Application.routes.draw do
 
 
   devise_for :owners
-  root 'restaurants#index'
+  root 'venues#index'
   get "front_end/rindex"
   resources :venues
   resources :posts
-  get 'home/resume'
 
   #get "home/contact"
   # The priority is based upon order of creation: first created -> highest priority.

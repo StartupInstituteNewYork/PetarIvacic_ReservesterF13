@@ -1,16 +1,10 @@
 .row
 	.large-12.columns
-		.large-9.columns
-			%h2 Food Near You 
-		.large-3.columns
-			%br
-			%p= link_to 'Add New venue', new_venue_path, class: "small button right" 
+		%h3 All Venues
 		%hr
-		
-
-
-= render @venues
-
+.row
+	.large-12.columns
+		= render @venues
 #user-widget
 	- if currentfb_user
 		= succeed "!" do

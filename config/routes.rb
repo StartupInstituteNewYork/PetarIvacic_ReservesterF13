@@ -12,15 +12,6 @@ Blog::Application.routes.draw do
   get "front_end/rindex"
   resources :venues
   resources :posts
-<<<<<<< HEAD
-<<<<<<< HEAD
-  root 'home#resume'
-  
-=======
-  get 'home/resume'
->>>>>>> devise
-=======
->>>>>>> twitter
 
   #get "home/contact"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,15 +1,26 @@
 Blog::Application.routes.draw do
+  
+
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+
+
   devise_for :owners
-  root 'restaurants#index'
+  root 'venues#index'
   get "front_end/rindex"
-  resources :restaurants
+  resources :venues
   resources :posts
+<<<<<<< HEAD
 <<<<<<< HEAD
   root 'home#resume'
   
 =======
   get 'home/resume'
 >>>>>>> devise
+=======
+>>>>>>> twitter
 
   #get "home/contact"
   # The priority is based upon order of creation: first created -> highest priority.

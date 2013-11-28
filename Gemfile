@@ -43,4 +43,11 @@ gem 'nokogiri'
 =======
 gem 'carrierwave'
 gem 'devise'
+<<<<<<< HEAD
 >>>>>>> devise
+=======
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'koala'
+gem 'twitter'
+>>>>>>> twitter

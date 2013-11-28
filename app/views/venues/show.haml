@@ -1,0 +1,75 @@
+.row
+  .large-9.columns
+    %h3= @venue.name
+    %p= @venue.description
+    .section-container.tabs{"data-section" => ""}
+      %section.section
+        %h5.title
+          %a{href: "#panel1"} About
+        .content{"data-slug" => "panel1"}
+          %form
+            .row.collapse
+              .large-2.columns
+                %label.inline Your Name
+              .large-10.columns
+                %input#yourName{placeholder: "Jane Smith", type: "text"}/
+            .row.collapse
+              .large-2.columns
+                %label.inline Your Email
+              .large-10.columns
+                %input#yourEmail{placeholder: "jane@smithco.com", type: "text"}/
+            %label Leave a tip for others...
+            %textarea{rows: "4"}
+            %button.radius.button{type: "submit"} Submit
+      %section.section
+        %h5.title
+          %a{href: "#panel2"} Instructors
+        .content{"data-slug" => "panel2"}
+          %ul.large-block-grid-5
+            %li
+              %a{href: "mailto:mal@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Mal Reynolds
+            %li
+              %a{href: "mailto:zoe@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Zoe Washburne
+            %li
+              %a{href: "mailto:jayne@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Jayne Cobb
+            %li
+              %a{href: "mailto:doc@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Simon Tam
+            %li
+              %a{href: "mailto:killyouwithmymind@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                River Tam
+            %li
+              %a{href: "mailto:leafonthewind@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Hoban Washburne
+            %li
+              %a{href: "mailto:book@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Shepherd Book
+            %li
+              %a{href: "mailto:klee@serenity.bc.reb"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Kaywinnet Lee Fry
+            %li
+              %a{href: "mailto:inara@guild.comp.all"}
+                %img{src: "http://placehold.it/200x200&text=[person]"}>/
+                Inarra Serra
+  / End Contact Details
+  / Sidebar
+  .large-3.columns
+    %p
+      %a{"data-reveal-id" => "mapModal", href: ""}
+        %img{src: "https://a.tiles.mapbox.com/v3/foursquare.map-ikj05elx/15/9649/12317.png"}/
+      %br/
+      %a{"data-reveal-id" => "mapModal", href: ""} View Map
+    %p= @venue.address
+  / End Sidebar
+

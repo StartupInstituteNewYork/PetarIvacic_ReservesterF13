@@ -1,0 +1,14 @@
+.row
+	.large-12.columns
+		%h3 All Venues
+		%hr
+.row
+	.large-12.columns
+		= render @venues
+#user-widget
+	- if currentfb_user
+		= succeed "!" do
+			%strong= currentfb_user.name
+			= link_to "Sign out", signout_path, id: "sign_out"
+	- else
+		= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in"

@@ -6,4 +6,5 @@ class Owner < ActiveRecord::Base
   def sign_up
     default_params.permit(:name, :email)
   end
+  has_many :venues
 end

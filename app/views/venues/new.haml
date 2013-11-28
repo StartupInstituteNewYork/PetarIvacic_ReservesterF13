@@ -1,0 +1,24 @@
+.row
+  %h2 Add New Venue
+  .large-6.columns
+    = form_for :venue, url: venues_path, :html => {:multipart => true} do |f|
+      - if @venue.errors.any?
+        #errorExplanation
+          %h2
+            = pluralize(@venue.errors.count, "error")
+            prohibited
+            this post from being saved:
+          %ul
+            - @venue.errors.full_messages.each do |msg|
+              %li= msg
+      %p
+        = f.label :name
+        = f.text_field :name
+      %p
+        = f.label :description
+        = f.text_area :description
+      %p
+        = f.file_field :image
+      %p
+        = f.submit
+    = link_to 'Back', venues_path

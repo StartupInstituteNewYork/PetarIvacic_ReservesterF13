@@ -8,7 +8,7 @@ Blog::Application.routes.draw do
 
 
   devise_for :owners
-  root 'venues#index'
+  root 'petar#home'
   get "front_end/rindex"
   resources :venues
   resources :posts
